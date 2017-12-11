@@ -5,17 +5,16 @@ using System.Web.Http;
 namespace WebApi.Controllers
 {
     [RoutePrefix("api")]
-    public class PingController : ApiController
+    public class ApiController : System.Web.Http.ApiController
     {
-        [Route("ping")]
+        [Route("public")]
         [HttpGet]
-        public IHttpActionResult Ping()
+        public IHttpActionResult Public()
         {
-            return Ok(new
-                {
-                    Message = "All good. You don't need to be authenticated to call this."
-                }
-            );
+            return Json(new
+            {
+                Message = "Hello from a public endpoint! You don't need to be authenticated to see this."
+            });
         }
 
         [Authorize]

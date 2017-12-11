@@ -151,9 +151,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\PingController.cs" />
+    <Compile Include="Controllers\ApiController.cs" />
     <Compile Include="Controllers\ScopeAuthorizeAttribute.cs" />
-    <Compile Include="Controllers\TimesheetsController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
