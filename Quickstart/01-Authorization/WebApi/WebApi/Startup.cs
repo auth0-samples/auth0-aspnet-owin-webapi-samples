@@ -1,18 +1,10 @@
-﻿using System;
-using System.Configuration;
-using System.IdentityModel.Tokens;
-using System.Linq;
-using Microsoft.Owin;
+﻿using Microsoft.Owin;
+using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Jwt;
 using Owin;
-using System.Security.Cryptography.X509Certificates;
-using System.Threading;
-using System.Threading.Tasks;
-using System.Web.Hosting;
+using System.Configuration;
+using System.IdentityModel.Tokens;
 using Auth0.Owin;
-using IdentityServer3.AccessTokenValidation;
-using Microsoft.IdentityModel.Protocols;
-using AuthenticationMode = Microsoft.Owin.Security.AuthenticationMode;
 
 [assembly: OwinStartup(typeof(WebApi.Startup))]
 
