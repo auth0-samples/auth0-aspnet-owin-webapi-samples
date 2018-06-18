@@ -3,10 +3,12 @@ using System.Configuration;
 using System.IdentityModel.Tokens;
 using System.Security.Cryptography.X509Certificates;
 using System.Web.Hosting;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Jwt;
 using Owin;
+using SecurityKey = Microsoft.IdentityModel.Tokens.SecurityKey;
 
 [assembly: OwinStartup(typeof(WebApi.Startup))]
 
@@ -30,7 +32,7 @@ namespace WebApi
                     {
                         ValidAudience = apiIdentifier,
                         ValidIssuer = domain,
-                        IssuerSigningKeyResolver = (a, b, c, d) => new X509SecurityKey(certificate),
+                        IssuerSigningKeyResolver = (token, securityToken, kid, parameters) => new[] {new X509SecurityKey(certificate)}
                     }
                 });
 
