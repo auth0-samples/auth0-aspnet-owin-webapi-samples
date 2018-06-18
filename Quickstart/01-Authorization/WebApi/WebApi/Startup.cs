@@ -26,7 +26,7 @@ namespace WebApi
                     {
                         ValidAudience = apiIdentifier,
                         ValidIssuer = domain,
-                        IssuerSigningKeyResolver = (token, securityToken, identifier, parameters) => keyResolver.GetSigningKey(identifier)
+                        IssuerSigningKeyResolver = (token, securityToken, kid, parameters) => keyResolver.GetSigningKey(kid)
                     }
                 });
 
