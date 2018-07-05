@@ -23,10 +23,10 @@ namespace WebApi
                 {
                     AuthenticationMode = AuthenticationMode.Active,
                     AllowedAudiences = new[] { audience },
-                    IssuerSecurityTokenProviders = new IIssuerSecurityTokenProvider[]
+                    IssuerSecurityKeyProviders = new IIssuerSecurityKeyProvider[]
                     {
-                        new SymmetricKeyIssuerSecurityTokenProvider(issuer, secret)
-                    },
+                        new SymmetricKeyIssuerSecurityKeyProvider(issuer, secret)
+                    }
                 });
 
             // Configure Web API
