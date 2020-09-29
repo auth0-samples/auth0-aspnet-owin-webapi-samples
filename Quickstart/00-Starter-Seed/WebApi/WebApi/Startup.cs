@@ -1,12 +1,9 @@
 ﻿using System.Configuration;
-using System.IdentityModel.Tokens;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.Owin;
-using Microsoft.Owin.Security.ActiveDirectory;
-using Microsoft.Owin.Security.DataHandler.Encoder;
 using Microsoft.Owin.Security.Jwt;
 using Owin;
-using System.Linq;
-using Microsoft.Owin.Security.OAuth;
+using WebApi.Support;
 using AuthenticationMode = Microsoft.Owin.Security.AuthenticationMode;
 
 [assembly: OwinStartup(typeof(WebApi.Startup))]

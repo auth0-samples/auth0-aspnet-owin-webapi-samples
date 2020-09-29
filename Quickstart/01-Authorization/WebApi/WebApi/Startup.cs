@@ -3,7 +3,7 @@ using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Jwt;
 using Owin;
 using System.Configuration;
-using Auth0.Owin;
+using WebApi.Support;
 using Microsoft.IdentityModel.Tokens;
 
 [assembly: OwinStartup(typeof(WebApi.Startup))]
