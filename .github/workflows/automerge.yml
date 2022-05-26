@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: alexwilson/enable-github-automerge-action@main
         with:
-          github-token: "${{ secrets.GITHUB_TOKEN }}"
+          github-token: "${{ secrets.AUTO_MERGE }}"
 
   auto-approve-dependency-updates:
     name: Automatically approve Dependabot PRs
@@ -22,4 +22,4 @@ jobs:
       - id: auto-approve-dependabot
         uses: hmarr/auto-approve-action@bca9db08da72b576ae3273e776e7ccf3f0a36e12
         with:
-          github-token: "${{ secrets.GITHUB_TOKEN }}"
+          github-token: "${{ secrets.AUTO_MERGE }}"
