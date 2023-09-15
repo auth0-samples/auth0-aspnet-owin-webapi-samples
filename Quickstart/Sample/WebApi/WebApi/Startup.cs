@@ -15,9 +15,6 @@ namespace WebApi
     {
         public void Configuration(IAppBuilder app)
         {
-            // Configure to use TLS 1.2
-            ServicePointManager.SecurityProtocol |= SecurityProtocolType.Tls12;
-
             var domain = $"https://{ConfigurationManager.AppSettings["Auth0Domain"]}/";
             var apiIdentifier = ConfigurationManager.AppSettings["Auth0ApiIdentifier"];
 
