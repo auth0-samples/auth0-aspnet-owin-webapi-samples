@@ -5,7 +5,6 @@ using Owin;
 using System.Configuration;
 using WebApi.Support;
 using Microsoft.IdentityModel.Tokens;
-using System.Net;
 
 [assembly: OwinStartup(typeof(WebApi.Startup))]
 
